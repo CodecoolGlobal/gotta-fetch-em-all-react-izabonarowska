@@ -1,95 +1,44 @@
-import React, { useEffect, useState } from 'react';
-import LocationList from './components/LocationList';
-import Pokemon from './components/Pokemon';
 import './App.css';
+import { useEffect, useState } from 'react';
+import ListedLocations from './components/ListedLocations';
 
-const App = () => {
+function App() {
+
   const [locations, setLocations] = useState([]);
-  const [pokemon, setPokemon] = useState(null);
-  const [noPokemonFound, setNoPokemonFound] = useState(false);
+
+  async function fetchLocations() {
+    const response = await fetch(`https://pokeapi.co/api/v2/location`)
+    const data = await response.json()
+    setLocations(data.results)
+  }
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/location?limit=20")
-      .then(response => response.json())
-      .then(data => {
-        setLocations(data.results);
-      })
-      .catch(error => {
-        console.error("Error");
-      });
-  }, []);
-
-  const handleLocationClick = async (clickedLocation) => {
-    try {
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${getRandomPokemonId()}`);
-      const data = await response.json();
-
-      const pokemonData = {
-        name: data.name,
-        sprite: data.sprites.front_default,
-        hp: data.stats[0].base_stat,
-        attack: data.stats[1].base_stat,
-        defense: data.stats[2].base_stat,
-        specialAttack: data.stats[3].base_stat,
-        specialDefense: data.stats[4].base_stat,
-        speed: data.stats[5].base_stat
-      };
-
-      if (data.name) {
-        setPokemon(pokemonData);
-        setLocations([]); // Usunięcie wszystkich lokalizacji
-        setNoPokemonFound(false);
-      } else {
-        setNoPokemonFound(true);
-      }
-    } catch (error) {
-      console.error("Error");
-    }
-  };
-
-  const getRandomPokemonId = () => {
-    return Math.floor(Math.random() * 151) + 1; // Zaktualizowany zakres dla ID pokemona
-  };
-
-  const handleRetryClick = () => {
-    setNoPokemonFound(false);
-    setLocations([]);
-    fetch("https://pokeapi.co/api/v2/location?limit=20")
-      .then(response => response.json())
-      .then(data => {
-        setLocations(data.results);
-      })
-      .catch(error => {
-        console.error("Error");
-      });
-  };
+    fetchLocations().catch(error => console.error('Error while fetching data:', error))
+  }, [])
+  
+  const handleChooseCity = (event) => {
+    // event.preventDefault();
+    console.log('click works')
+  }
 
   return (
     <div className="App">
-      <div className="location-container">
-        {noPokemonFound ? (
-          <div className="no-pokemon-found">
-            <p>Wygląda na to, że w tej lokalizacji nie ma żadnego pokémona.</p>
-            <button onClick={handleRetryClick}>Spróbuj ponownie</button>
-          </div>
-        ) : (
-          <LocationList locations={locations} onLocationClick={handleLocationClick} />
-        )}
+      <div className='grid-container'>
+      <div className='backgroud-container'></div>
+        <div className='map'>
+          <img src='./Hokkaidō_géolocalisation_relief.png' alt='Map of Poke World'/>
+        </div>
+        <div className='pokedex'>
+          <img src ='./Pokedex_screen_blank.png' alt='Pokedex'/>
+        </div>
+        <div className='cities-container'>
+          {locations.map((location, index) => {
+              return <ListedLocations key={index} location={location} onClick={handleChooseCity}/>
+            })}
+        </div>
       </div>
-      {pokemon && (
-        <Pokemon
-          name={pokemon.name}
-          sprite={pokemon.sprite}
-          hp={pokemon.hp}
-          attack={pokemon.attack}
-          defense={pokemon.defense}
-          specialAttack={pokemon.specialAttack}
-          specialDefense={pokemon.specialDefense}
-          speed={pokemon.speed}
-        />
-      )}
     </div>
   );
-};
+}
 
 export default App;

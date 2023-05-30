@@ -1,45 +1,75 @@
-.App {
-  text-align: center;
-  padding: 20px;
-  background-color: rgb(236, 246, 246);
-}
+@media only screen and (min-width: 992px) {  
+  body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
 
-.location-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  .grid-container {
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    grid-template-areas: 
+    'map  main main'
+    'map  main main'
+    'pokedex  main main'
+    'pokedex  main main'
+    'pokedex  main main';
+    column-gap: 32px;
+    row-gap: 32px;
+    padding: 16px;
+    /* background-color: lightcoral; */
+    border-style: solid;
+  }
 
-.location-item {
-  background-color: #ece6f2;
-  border-radius: 8px;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  .map{
+    grid-area: map;
+    justify-self: center;
+  }
 
-.location-item:hover {
-  background-color: #d71818;
-}
+  .map > img {
+    height: 450px;
+    width: 450px;
+  }
 
-.location-item:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #010514;
-}
+  .pokedex {
+    grid-area: pokedex;
+    justify-self: center;
 
-.Pokemon {
-  margin-top: 20px;
-}
+  }
 
-.Pokemon-name {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+  .pokedex > img {
+    width: 450px;
+    height: auto;
+  }
 
-.Pokemon-sprite {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  .cities-container {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-image: url('/public/Pokemon_background.jpg');
+    background-size: 950px 530px;
+    background-repeat: no-repeat;
+    background-position: right bottom; */
+  }
+
+  .backgroud-container {
+    grid-area: main;
+    justify-self: stretch;
+    background-image: url('/public/Pokemon_background.jpg');
+    background-size: 950px 530px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+  }
+
+  .cities-container >h2 {
+    width: 300px;
+    margin: 16px;
+    padding: 10px;
+    border-style:outset;
+    background-color: lightgoldenrodyellow;
+    
+  }
 }

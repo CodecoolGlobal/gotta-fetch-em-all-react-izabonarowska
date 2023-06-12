@@ -1,0 +1,55 @@
+.battle--main{
+    display: flex;
+    font-family: 'Pokemon Solid', sans-serif;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/dereeob-946495aa-4179-4459-9708-96212f61e81a.jpg/v1/fill/w_1065,h_630,q_75,strp/lumiose_city_background_2_by_willdinomaster55_dereeob-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMwIiwicGF0aCI6IlwvZlwvODBmZjUyM2YtZmY4NC00NTdkLWE1NDctNDY0NTg4ZDNhM2QzXC9kZXJlZW9iLTk0NjQ5NWFhLTQxNzktNDQ1OS05NzA4LTk2MjEyZjYxZTgxYS5qcGciLCJ3aWR0aCI6Ijw9MTA2NSJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.C_yGCXNGobS9FeooMmfb6gaDb3jRfqs837QjJuGcDfM");
+    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    top:0;
+    left:0;
+}
+
+.battle-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(235, 232, 232, 0.452);
+}
+
+.battle--main img {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    image-rendering: crisp-edges;
+    margin-bottom: 10px;
+}
+
+.battle--btn-attack {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.battle--btn-run {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

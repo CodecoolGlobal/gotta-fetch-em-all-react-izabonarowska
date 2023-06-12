@@ -1,0 +1,63 @@
+.encounter--main {
+    font-family: 'Pokemon Solid', sans-serif;
+    background-image: url("https://w0.peakpx.com/wallpaper/153/760/HD-wallpaper-street-pretty-house-scenic-home-beautiful-sweet-nice-anime-car-beauty-scenery-road-traffic-light-lovely-town-bus-motorcar-building-scene.jpg");
+    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    align-items: column;
+    background-size: cover;
+    margin-bottom: 20px;
+    padding: 10px;
+    align-items: center;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.encounter--main-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(235, 232, 232, 0.452);
+}
+
+
+.encounter--main img {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    image-rendering: crisp-edges;
+    margin-bottom: 10px;
+}
+
+.encounter--btn-run {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.encounter--btn-fight {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

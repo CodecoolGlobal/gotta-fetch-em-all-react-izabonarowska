@@ -1,4 +1,4 @@
-// import Pokemon from './components/Pokemon'
+import './CityInfo.css';
 import { useState, useEffect } from 'react';
 
 const CityInfo = ({ cityInfo, setPage, onBack, setRivalPokemonURL }) => {
@@ -32,10 +32,11 @@ const CityInfo = ({ cityInfo, setPage, onBack, setRivalPokemonURL }) => {
         <div>
 
             <div className={"cityInfo--info"}>
-                <h2>Hello there! Welcome to {cityInfo.name.replace(/-/g, ' ').replace(/(?:^|\s)\S/g, (word) => word.toUpperCase())}</h2>
+                <div className="cityInfo-box">
+                <h1>Hello there! Welcome to {cityInfo.name.replace(/-/g, ' ').replace(/(?:^|\s)\S/g, (word) => word.toUpperCase())}</h1>
                 {LocationEncounters ?
                     (<div className="cityInfo--pokemon">
-                        Oh! There is a rare pokemon nearby...
+                       <h2>Oh! There is a rare pokemon nearby...</h2> 
                     </div>)
                     :
                     (
@@ -44,7 +45,8 @@ const CityInfo = ({ cityInfo, setPage, onBack, setRivalPokemonURL }) => {
                         </div>)}
                 <div className="cityInfo--buttons">
                     <button className="cityInfo--come-button" onClick={handleComeButton}>Come closer...</button>
-                    <button className="back-button" onClick={handleBackButton}>Back</button>
+                    {/* <button className="cityInfo--back-button" onClick={handleBackButton}>Back</button> */}
+                </div>
                 </div>
             </div>
         </div >

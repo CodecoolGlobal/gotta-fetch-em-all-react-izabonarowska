@@ -1,3 +1,4 @@
+import './Encounter.css';
 import { useEffect } from 'react';
 
 const Encounter = ({ setPage, rivalPokemonURL, setRivalPokemon, rivalPokemon }) => {
@@ -23,16 +24,18 @@ const Encounter = ({ setPage, rivalPokemonURL, setRivalPokemon, rivalPokemon }) 
 
     return (
         <div className="encounter--main">
-            <div className="encounter--btn-back">
-                <button onClick={handleBackButton}>RUN!</button>
+            <div className="encounter--main-box">
+            <div className="encounter--btn">
+                <button className='encounter--btn-run' onClick={handleBackButton}>RUN!</button>
             </div>
             <div className="encounter--info">
                 {(rivalPokemon) &&
                     <img src={rivalPokemon.sprites["front_default"]} alt={rivalPokemon.name} />
                 }
             </div>
-            <div className="encounter--btn-battle">
-                <button onClick={handleBattleButton}>FIGHT!</button>
+            <div className="encounter--btn">
+                <button className='encounter--btn-fight' onClick={handleBattleButton}>FIGHT!</button>
+            </div>
             </div>
         </div>
     );

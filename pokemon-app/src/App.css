@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+.mainpage-background {
+  font-family: 'Pokemon Solid', sans-serif;
+  background-image: url("https://vgculturehq.com/wp-content/uploads/2019/06/pokemon-sword-shield-exploration-open-world.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cities-container {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cities-header {
+  font-family: 'Pokemon Solid', sans-serif;
+  cursor: pointer;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.city-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 200px;
+  background-color: #dfcc3f;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.pokedex--main {
+  font-family: 'Pokemon Solid', sans-serif;
+  background-image: url("https://e0.pxfuel.com/wallpapers/269/183/desktop-wallpaper-rotom-pokedex-background.jpg");
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.won_battle {
+  font-family: 'Pokezmon Solid', sans-serif;
+  background-image: url("https://vgculturehq.com/wp-content/uploads/2019/06/pokemon-sword-shield-exploration-open-world.jpg");
+  background-color: #f2f2f2;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  margin: 0;
+  align-items: center;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.won_box{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(235, 232, 232, 0.452);
+}
+
+.lost_battle {
+  font-family: 'Pokezmon Solid', sans-serif;
+  background-image: url("https://vgculturehq.com/wp-content/uploads/2019/06/pokemon-sword-shield-exploration-open-world.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(235, 232, 232, 0.452);
+  background-repeat: no-repeat;
+  margin: 0;
+  align-items: center;
+  padding: 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.lost_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(235, 232, 232, 0.452);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.back_button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

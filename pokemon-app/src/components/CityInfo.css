@@ -1,0 +1,51 @@
+.cityInfo--info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: 'Pokemon Solid', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/dereeob-946495aa-4179-4459-9708-96212f61e81a.jpg/v1/fill/w_1065,h_630,q_75,strp/lumiose_city_background_2_by_willdinomaster55_dereeob-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjMwIiwicGF0aCI6IlwvZlwvODBmZjUyM2YtZmY4NC00NTdkLWE1NDctNDY0NTg4ZDNhM2QzXC9kZXJlZW9iLTk0NjQ5NWFhLTQxNzktNDQ1OS05NzA4LTk2MjEyZjYxZTgxYS5qcGciLCJ3aWR0aCI6Ijw9MTA2NSJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.C_yGCXNGobS9FeooMmfb6gaDb3jRfqs837QjJuGcDfM");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.cityInfo-box {
+    display: flex;
+    background-color: rgba(235, 232, 232, 0.452);
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cityInfo--come-button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cityInfo--back-button {
+    height: 50px;
+    width: 200px;
+    font-size: medium;
+    background-color: #dfcc3f;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}

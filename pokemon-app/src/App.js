@@ -40,12 +40,18 @@ function App() {
     switch (page) {
       case "mainpage":
         return (
-          <div className="cities-container">
-            {citiesList.map((city, index) => (
-              <div className="city-card" key={index} onClick={() => handleCityInfoClick(city)}>
-                {city.name.replace(/-/g, ' ').replace(/(?:^|\s)\S/g, (word) => word.toUpperCase())}
+          <div className='mainpage-background'>
+            <div className="cities-header">
+              <h1>Hello stranger! </h1>
+              <h3>What's your next destination?</h3>
+              <div className="cities-container">
+                {citiesList.map((city, index) => (
+                  <div className="city-card" key={index} onClick={() => handleCityInfoClick(city)}>
+                    {city.name.replace(/-/g, ' ').replace(/(?:^|\s)\S/g, (word) => word.toUpperCase())}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         )
 
@@ -71,31 +77,57 @@ function App() {
         return (
           <div>
             <div className='pokedex--main'>
-              {ownedPokemons.map((pokemonURL, index) =>
-                <Pokedex
-                  key={index}
-                  setPage={setPage}
-                  pokemonURL={pokemonURL}
-                  sellectPokemon={setSellectedPokemon}
-                />
-              )
-              }
-              {sellectedPokemon&&
-              sellectedPokemon.name}
+              <h1>Choose your fighter:</h1>
+              <p>
+                {ownedPokemons.map((pokemonURL, index) =>
+                  <Pokedex
+                    key={index}
+                    setPage={setPage}
+                    pokemonURL={pokemonURL}
+                    sellectPokemon={setSellectedPokemon}
+                  />
+                )
+                }
+              </p>
             </div>
           </div>
         )
-        case "battle":
-          return (
-           <div className='battle-container'>
+      case "battle":
+        return (
+          <div className='battle-container'>
             {<Battle
               setPage={setPage}
               rivalPokemonURL={rivalPokemonURL}
               rivalPokemon={rivalPokemon}
               sellectedPokemon={sellectedPokemon}
-              />}
+            />}
           </div>
-          )
+        )
+      case "won_battle":
+        return (
+          <div className='won_battle'>
+            <div className='won_box'>
+              <h1>Congratulations! </h1>
+              <h2>{rivalPokemon.name.charAt(0).toUpperCase() + rivalPokemon.name.slice(1)} has been caught!</h2>
+              <button className='back_button' onClick={() => {
+                setPage("mainpage")
+                setOwnedPokemons([...ownedPokemons, rivalPokemonURL])
+              }
+              }>Explore more!</button>
+            </div>
+          </div>
+        )
+      case "lost_battle":
+        return (
+          <div className='lost_battle'>
+            <div className='lost_box'>
+              <h1>You lost the battle!</h1>
+              <div>
+                <button className='back_button' onClick={() => setPage("mainpage")}>Explore more!</button>
+              </div>
+            </div>
+          </div>
+        )
     }
   }
   return (

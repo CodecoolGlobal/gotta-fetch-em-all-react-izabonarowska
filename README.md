@@ -35,7 +35,8 @@ Projekt jest w obecnej fazie ukończony.
 Aplikacja ma prosty interfejs użytkownika, który umożliwia poruszanie się między ekranami z wykorzystaniem stanu wewnętrznego Reacta.
 
 
-##English Version
+## English Version
+
 This project was created for learning React and CSS. It's a simple application that allows users to travel between different cities, encountering various pokemons. By battling with them, we can capture and add them to our pokedex.
 
 ### Technologies

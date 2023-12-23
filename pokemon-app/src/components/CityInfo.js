@@ -45,7 +45,6 @@ const CityInfo = ({ cityInfo, setPage, onBack, setRivalPokemonURL }) => {
                         </div>)}
                 <div className="cityInfo--buttons">
                     <button className="cityInfo--come-button" onClick={handleComeButton}>Come closer...</button>
-                    {/* <button className="cityInfo--back-button" onClick={handleBackButton}>Back</button> */}
                 </div>
                 </div>
             </div>

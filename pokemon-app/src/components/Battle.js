@@ -1,5 +1,5 @@
 import './Battle.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Battle = ({ setPage, rivalPokemon, sellectedPokemon }) => {
     const [sellectedPokemonHP, setsellectedPokemonHP] = useState(sellectedPokemon.stats[0]["base_stat"]);

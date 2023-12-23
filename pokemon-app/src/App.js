@@ -1,9 +1,9 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import CityInfo from './components/CityInfo'
-import Encounter from './components/Encounter'
-import Pokedex from './components/Pokedex'
-import Battle from './components/Battle'
+import CityInfo from './components/CityInfo';
+import Encounter from './components/Encounter';
+import Pokedex from './components/Pokedex';
+import Battle from './components/Battle';
 
 function App() {
   const [page, setPage] = useState("mainpage")
@@ -35,14 +35,17 @@ function App() {
     setPage("cityinfo")
   }
 
-  const managePageState = () => {
+  const handleBackButtonClick = () => {
+    setPage("mainpage");
+  };
 
+  const managePageState = () => {
     switch (page) {
       case "mainpage":
         return (
           <div className='mainpage-background'>
             <div className="cities-header">
-              <h1>Hello stranger! </h1>
+              <h1>Hello stranger!</h1>
               <h3>What's your next destination?</h3>
               <div className="cities-container">
                 {citiesList.map((city, index) => (
@@ -123,7 +126,7 @@ function App() {
             <div className='lost_box'>
               <h1>You lost the battle!</h1>
               <div>
-                <button className='back_button' onClick={() => setPage("mainpage")}>Explore more!</button>
+                <button className='back_button' onClick={handleBackButtonClick}>Explore more!</button>
               </div>
             </div>
           </div>

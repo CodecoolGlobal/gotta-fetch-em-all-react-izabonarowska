@@ -5,33 +5,21 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #f2f2f2;
   background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
-  /* position: fixed; */
-  top: 0;
-  left: 0;
   min-width: 100%;
   min-height: 100%;
 }
 
 .cities-container {
-  /* max-width: 800px; */
   margin: 0 auto;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
 }
 
 .cities-header {
   font-family: 'Pokemon Solid', sans-serif;
   cursor: pointer;
-
 }
 
 .city-card {
@@ -74,15 +62,11 @@
   background-size: cover;
   background-color: #f2f2f2;
   background-repeat: no-repeat;
-  margin: 0;
   align-items: center;
-  padding: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  top: 0;
-  left: 0;
   min-width: 100%;
   min-height: 100%;
 }
@@ -113,9 +97,7 @@
   border-radius: 5px;
   background-color: rgba(235, 232, 232, 0.452);
   background-repeat: no-repeat;
-  margin: 0;
   align-items: center;
-  padding: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;

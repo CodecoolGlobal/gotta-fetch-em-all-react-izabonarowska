@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Pokemon Adventure App
+(for english scroll down)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projekt ten został stworzony w celu nauki Reacta i CSS. Jest to prosta aplikacja, która umożliwia użytkownikowi podróżowanie między różnymi miastami, gdzie napotykamy różne pokemony i walcząc z nimi, możemy je umieścić w naszym pokedexie.
 
-## Available Scripts
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://i.ibb.co/1rKCSzc/Zrzut-ekranu-2023-12-23-141119.png" alt="Screen 1" width="200">
+    <img src="https://i.ibb.co/S3QNY4n/Zrzut-ekranu-2023-12-23-141132.png" alt="Screen 2" width="200">
+    <img src="https://i.ibb.co/f2LH76m/Zrzut-ekranu-2023-12-23-141144.png" alt="Screen 3" width="200">
+    <img src="https://i.ibb.co/PYj4JZC/Zrzut-ekranu-2023-12-23-141158.png" alt="Screen 4" width="200">
+</div>
 
-In the project directory, you can run:
+## Technologie
+Aplikacja została zbudowana przy użyciu:
+- React
+- CSS
 
-### `npm start`
+## Uruchomienie Projektu
+Aby uruchomić ten projekt lokalnie, wykonaj następujące kroki:
+1. Sklonuj repozytorium na swój komputer.
+2. W katalogu projektu użyj komendy `npm install` w terminalu, aby zainstalować wszystkie wymagane zależności.
+3. Po zainstalowaniu zależności, użyj komendy `npm start`, aby uruchomić aplikację w przeglądarce.
+4. Strona w przeglądarce sama się uruchomi na localhost:3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funkcjonalności
+Jako użytkownik mogę:
+- wybrać miasto, aby uzyskać informacje na jego temat.
+- stoczyć walkę z napotkanym pokemonem.
+- zobaczyć listę posiadanych pokemonów i wybrać jednego z nich do walki.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Status Projektu
+Projekt jest w obecnej fazie ukończony.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Inne informacje
+Aplikacja ma prosty interfejs użytkownika, który umożliwia poruszanie się między ekranami z wykorzystaniem stanu wewnętrznego Reacta.
